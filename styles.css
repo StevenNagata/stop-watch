@@ -1,0 +1,13 @@
+body {
+  font-family: Helvetica, sans-serif;
+  color: green;
+}
+
+.background {
+  background-image: url("Rolex.jpg");
+  background-size: 100% 100%;
+  width: 100%;
+  height: 600px;
+  margin: 0;
+  padding: 0;
+}
