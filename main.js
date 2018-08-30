@@ -1,5 +1,5 @@
 var $currentTime = document.getElementById('time')
-var $startbutton = document.getElementById('startbutton')
+var $startButton = document.getElementById('startbutton')
 var currentTime = parseInt($currentTime.textContent, 10)
 
 function timeStart() {
@@ -10,8 +10,3 @@ function timeStart() {
 }
 
 $startbutton.addEventListener('click', timeStart, false)
-
-
-function timePause() {
-
-}
