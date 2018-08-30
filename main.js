@@ -4,9 +4,7 @@ var currentTime = parseInt($time.textContent, 10)
 var intervalId;
 
 $startPause.addEventListener('click', function () {
-
   var runState = $startPause.textContent
-
   function increaseTime() {
     currentTime += 1
     $time.textContent = currentTime
