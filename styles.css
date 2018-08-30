@@ -36,3 +36,15 @@ button:hover {
 .red {
   background-color: #ff3c42;
 }
+
+.hidden {
+  display: none;
+}
+
+.display {
+  display: visible;
+}
+
+#reset {
+  background-color: #737373;
+}
