@@ -1,6 +1,6 @@
-var $time = document.getElementById('time') // the variable that is controlling the time
+var $time = document.getElementById('time')
 var $startPause = document.getElementById('startPause')
-var currentTime = parseInt($time.textContent, 10) // obtaining the content of time and making it a number
+var currentTime = parseInt($time.textContent, 10)
 var intervalId;
 
 $startPause.addEventListener('click', function () {
@@ -14,13 +14,13 @@ $startPause.addEventListener('click', function () {
   if (runState === "Start") {
     clearInterval(intervalId)
     intervalId = setInterval(increaseTime, 1000)
-    $startPause.textContent = "Pause" //changing to the pause icon
+    $startPause.textContent = "Pause"
     $startPause.classList.add('red')
     $startPause.classList.remove('green')
   }
   if (runState === "Pause") {
     clearInterval(intervalId)
-    $startPause.textContent = "Start" //changing to the start icon
+    $startPause.textContent = "Start"
     $startPause.classList.add('green')
     $startPause.classList.remove('red')
   }
