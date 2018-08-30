@@ -29,4 +29,9 @@ $startPause.addEventListener('click', function () {
 
 $reset.addEventListener('click', function () {
     clearInterval(intervalId)
+    currentTime = 0
+    $time.textContent = 0
+    $startPause.textContent = "Start"
+    $startPause.classList.add('green')
+    $startPause.classList.remove('red')
 })
