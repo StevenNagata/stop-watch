@@ -13,7 +13,7 @@ $startPause.addEventListener('click', function () {
   function increaseTime() {
     if (maxTime <= currentTime) {
       clearInterval(intervalId)
-
+      $time.classList.add("alert")
     }
     else {
       currentTime += 1
