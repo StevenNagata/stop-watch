@@ -11,16 +11,20 @@ $startPause.addEventListener('click', function () {
     currentTime += 1
     $time.textContent = currentTime
   }
-// if Timer is paused: clear interval, start interval, chenge the button to "pause" & red
+  // if Timer is paused: clear interval, start interval, chenge the button to "pause" & red
   if (runState === "Start") {
     clearInterval(intervalId)
     intervalId = setInterval(increaseTime, 1000)
-    $startPause.textContent = "Pause"
+    $startPause.textContent = "Pause" //changing to the pause icon
+    $startPause.classList.add('red') //change button to red
+    $startPause.classList.remove('green') //remove the color of green
 
   }
-// if Timer is running: clear interval, change the button to "start" & green
+  // if Timer is running: clear interval, change the button to "start" & green
   if (runState === "Pause") {
     clearInterval(intervalId)
-    $startPause.textContent = "Start"
+    $startPause.textContent = "Start" //changing to the start icon
+    $startPause.classList.add('green') //change button to green
+    $startPause.classList.remove('red') //remove the color red
   }
 })
