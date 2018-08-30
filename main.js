@@ -17,7 +17,6 @@ $startPause.addEventListener('click', function () {
     $startPause.classList.add('red')
     $startPause.classList.remove('green')
     $reset.classList.add('display')
-    $rest.classList.remove('hidden')
   }
   if (runState === "Pause") {
     clearInterval(intervalId)
@@ -34,4 +33,5 @@ $reset.addEventListener('click', function () {
     $startPause.textContent = "Start"
     $startPause.classList.add('green')
     $startPause.classList.remove('red')
+    $reset.classList.remove('display')
 })
