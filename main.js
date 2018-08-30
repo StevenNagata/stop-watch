@@ -13,14 +13,14 @@ $startPause.addEventListener('click', function () {
   }
 // if Timer is paused: clear interval, start interval, chenge the button to "pause" & red
   if (runState === "Start") {
-
+    clearInterval(intervalId)
     intervalId = setInterval(increaseTime, 1000)
     $startPause.textContent = "Pause"
 
   }
 // if Timer is running: clear interval, change the button to "start" & green
   if (runState === "Pause") {
-
+    clearInterval(intervalId)
     $startPause.textContent = "Start"
   }
 })
