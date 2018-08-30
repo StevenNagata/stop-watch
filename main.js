@@ -26,3 +26,7 @@ $startPause.addEventListener('click', function () {
     $startPause.classList.remove('red')
   }
 })
+
+$reset.addEventListener('click', function () {
+    clearInterval(intervalId)
+})
