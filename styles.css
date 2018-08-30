@@ -42,7 +42,7 @@ button:hover {
 }
 
 .display {
-  display: visible;
+  display: inline-block;
 }
 
 #reset {

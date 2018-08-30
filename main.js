@@ -1,6 +1,7 @@
 var $time = document.getElementById('time')
 var $startPause = document.getElementById('startPause')
 var currentTime = parseInt($time.textContent, 10)
+var $reset = document.getElementById('reset')
 var intervalId;
 
 $startPause.addEventListener('click', function () {
@@ -15,6 +16,8 @@ $startPause.addEventListener('click', function () {
     $startPause.textContent = "Pause"
     $startPause.classList.add('red')
     $startPause.classList.remove('green')
+    $reset.classList.add('display')
+    $rest.classList.remove('hidden')
   }
   if (runState === "Pause") {
     clearInterval(intervalId)
