@@ -1,41 +1,26 @@
-var $time = document.getElementById('time')
+var $time = document.getElementById('time') // the variable that is controlling the time
 var $startPause = document.getElementById('startPause')
-var currentTime = parseInt($time.textContent, 10)
-
+var currentTime = parseInt($time.textContent, 10) // obtaining the content of time and making it a number
+var intervalId;
 
 $startPause.addEventListener('click', function () {
 
   var runState = $startPause.textContent
 
-  if (runState === "Start") {
-    var intervalId = setInterval(function () {
-      currentTime += 1
-      $time.textContent = currentTime
-    }, 1000)
-    $startPause.textContent = "Pause"
+  function increaseTime() {
+    currentTime += 1
+    $time.textContent = currentTime
   }
+// if Timer is paused: clear interval, start interval, chenge the button to "pause" & red
+  if (runState === "Start") {
 
+    intervalId = setInterval(increaseTime, 1000)
+    $startPause.textContent = "Pause"
+
+  }
+// if Timer is running: clear interval, change the button to "start" & green
   if (runState === "Pause") {
-    clearInterval(1)
+
     $startPause.textContent = "Start"
   }
-
 })
-
-
-/*
-function timeStart() {
-
-  var timeIncrease = setInterval(function () {
-    $currentTime.textContent = currentTime += 1
-  }, 1000)
-
-}
-
-$startbutton.addEventListener('click', timeStart, false)
-
-
-function timePause() {
-
-}
-*/
