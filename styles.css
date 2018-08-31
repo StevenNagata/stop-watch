@@ -13,9 +13,17 @@ body {
   padding: 0;
 }
 
+a {
+  font-size: 1rem;
+}
+
 h1 {
   padding-top: 2rem;
   padding-bottom: 1rem;
+}
+
+h4 {
+  font-size: 1rem;
 }
 
 button {
@@ -47,4 +55,8 @@ button:hover {
 
 #reset {
   background-color: #737373;
+}
+
+.alert {
+  color: #bf0200;
 }
